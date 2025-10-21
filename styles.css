@@ -11,11 +11,10 @@ body {
   color: #fff;
   margin: 0;
   padding: 0;
-  height: 100vh;
-  overflow: hidden; /* empêche tout scroll */
   position: relative;
   box-sizing: border-box;
   text-align: center;
+  /* height et overflow retirés pour éviter bugs mobile */
 }
 
 /* ------------------------------ */
@@ -46,17 +45,18 @@ h1 {
   font-weight: bold;
   color: #FF4500 !important; /* orange vif */
   text-shadow: 1px 1px 3px #000;
-  margin-top: 3vh; /* espace suffisant depuis la date */
+  margin-top: 3vh;
 }
 
 /* ------------------------------ */
 /* Liens en bas                   */
 /* ------------------------------ */
 .links-section {
-  position: absolute;
-  bottom: 2vh; /* toujours en bas */
+  position: fixed; /* reste toujours en bas */
+  bottom: 2vh;
   width: 100%;
   text-align: center;
+  z-index: 10; /* s'assurer qu'ils restent au-dessus */
 }
 
 .links-section ul {
@@ -88,11 +88,8 @@ h1 {
   h1 { font-size: 2.5rem; }
   .date-centree { font-size: 1.2rem; }
   #countdown { font-size: 1.8rem; }
-  
-  /* Maintenir les liens en bas et les rendre visibles */
-  .links-section {
-    bottom: 1vh; /* ajuste si nécessaire */
-  }
+
+  /* Ajustements liens pour mobile */
   .links-section a { font-size: 1rem; }
   .links-section li { margin-bottom: 0.5rem; }
 }
