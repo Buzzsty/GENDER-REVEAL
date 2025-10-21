@@ -9,29 +9,33 @@ body {
   color: #fff;
   margin: 0;
   padding: 0;
+  height: 100vh;
 }
 
-/* Contenu principal */
+/* Contenu principal centré */
 main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centre vertical */
+  align-items: center;     /* centre horizontal */
+  text-align: center;
+  height: 100%;
+  position: relative;
   background: transparent;
-  box-shadow: none;
-  border-radius: 0;
   padding: 30px 25px;
   max-width: 600px;
-  margin: 40px auto;
+  margin: 0 auto;
 }
 
 /* Titres */
 h1, h2 {
-  color: #FFD700; /* jaune comics */
-  text-align: center;
+  color: #FFD700;
   text-shadow: 2px 2px 4px #000;
   margin: 0.5em 0;
 }
 
 /* Date */
 .date-centree {
-  text-align: center;
   font-size: 1.2em;
   color: #FFD700;
   text-shadow: 1px 1px 3px #000;
@@ -45,10 +49,14 @@ h1, h2 {
   font-weight: bold;
   color: #FF4500;
   text-shadow: 1px 1px 3px #000;
-  text-align: center;
 }
 
-/* Liens */
+/* Liens centrés en bas (~4/5 de la page) */
+.links-section {
+  margin-top: auto; /* pousse la section vers le bas */
+  width: 100%;
+}
+
 .links-section ul {
   list-style: none;
   padding: 0;
@@ -56,12 +64,11 @@ h1, h2 {
 
 .links-section li {
   margin-bottom: 15px;
-  text-align: center;
 }
 
 .links-section a {
   text-decoration: none;
-  color: #1E90FF; /* bleu comics */
+  color: #1E90FF;
   font-size: 1.3em;
   text-shadow: 1px 1px 2px #000;
   transition: color 0.2s;
@@ -71,11 +78,10 @@ h1, h2 {
   color: #FF0000;
 }
 
-/* Responsive pour mobile et PC */
+/* Responsive pour mobile */
 @media (max-width: 600px) {
   main {
     padding: 15px;
-    margin: 10px;
   }
   #countdown {
     font-size: 1.8rem;
@@ -85,6 +91,7 @@ h1, h2 {
   }
 }
 
+/* Pour grands écrans */
 @media (min-width: 1200px) {
   main {
     max-width: 800px;
