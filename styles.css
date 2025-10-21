@@ -9,37 +9,34 @@ body {
   color: #fff;
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: 100vh;
   overflow: hidden; /* empêche tout scroll */
+  position: relative;
   box-sizing: border-box;
-}
-
-/* Contenu principal en colonne */
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* commence en haut */
-  align-items: center;         /* centre horizontal */
-  height: 100%;                /* utilise toute la hauteur */
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 2vh 20px 2vh 20px;  /* espace depuis le haut et bas */
-  gap: 2vh;                     /* espacement vertical entre sections */
-}
-
-/* Titres */
-h1, h2 {
-  color: #FFD700;
   text-align: center;
-  text-shadow: 2px 2px 4px #000;
-  margin: 0;
 }
 
-/* Date */
+/* Titre GENDER REVEAL */
+h1 {
+  color: #FFD700;
+  text-shadow: 2px 2px 4px #000;
+  font-size: 3rem;
+  margin: 0;
+  position: absolute;
+  top: 2vh; /* tout en haut */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Date / Heure */
 .date-centree {
-  font-size: 1.2em;
+  font-size: 1.5rem;
   color: #FFD700;
   text-shadow: 1px 1px 3px #000;
+  position: absolute;
+  top: 8vh; /* juste en dessous du titre */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Compte à rebours */
@@ -48,20 +45,24 @@ h1, h2 {
   font-weight: bold;
   color: #FF4500;
   text-shadow: 1px 1px 3px #000;
-  text-align: center;
+  position: absolute;
+  top: 20vh; /* un peu plus bas dans la partie haute */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-/* Liens centrés vers 4/5 de la page */
+/* Liens en bas */
 .links-section {
-  margin-top: auto; /* pousse vers le bas */
+  position: absolute;
+  bottom: 2vh; /* collés en bas avec petit espace */
   width: 100%;
   text-align: center;
-  padding-bottom: 2vh; /* espace par rapport au bas */
 }
 
 .links-section ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .links-section li {
@@ -71,7 +72,7 @@ h1, h2 {
 .links-section a {
   text-decoration: none;
   color: #1E90FF;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   text-shadow: 1px 1px 2px #000;
   transition: color 0.2s;
 }
@@ -82,26 +83,16 @@ h1, h2 {
 
 /* Responsive mobile */
 @media (max-width: 600px) {
-  main {
-    padding: 2vh 15px;
-    gap: 1.5vh;
-  }
-  #countdown {
-    font-size: 1.8rem;
-  }
-  .links-section a {
-    font-size: 1.1em;
-  }
+  h1 { font-size: 2.5rem; top: 2vh; }
+  .date-centree { font-size: 1.2rem; top: 7vh; }
+  #countdown { font-size: 1.8rem; top: 18vh; }
+  .links-section a { font-size: 1.1rem; }
 }
 
-/* Grand écran */
+/* Grands écrans */
 @media (min-width: 1200px) {
-  main {
-    max-width: 800px;
-    padding: 2vh 40px;
-    gap: 3vh;
-  }
-  #countdown {
-    font-size: 3rem;
-  }
+  h1 { font-size: 4rem; top: 2vh; }
+  .date-centree { font-size: 2rem; top: 8vh; }
+  #countdown { font-size: 3rem; top: 20vh; }
+  .links-section a { font-size: 1.5rem; }
 }
