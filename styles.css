@@ -1,4 +1,6 @@
-/* Police comics */
+/* ------------------------------ */
+/* Police comics et fond global   */
+/* ------------------------------ */
 body {
   font-family: 'Bangers', cursive;
   background-image: url("images/children.png");
@@ -16,15 +18,19 @@ body {
   text-align: center;
 }
 
-/* Titre */
+/* ------------------------------ */
+/* Titre                         */
+/* ------------------------------ */
 h1 {
-  color: #FFD700;
+  color: #FFD700; /* doré */
   text-shadow: 2px 2px 4px #000;
   font-size: 3rem;
   margin: 2vh 0 0 0; /* espace depuis le haut */
 }
 
-/* Date / Heure */
+/* ------------------------------ */
+/* Date / Heure                   */
+/* ------------------------------ */
 .date-centree {
   font-size: 1.5rem;
   color: #FFD700;
@@ -32,23 +38,26 @@ h1 {
   margin-top: 1vh; /* juste en dessous du titre */
 }
 
-/* Compte à rebours */
+/* ------------------------------ */
+/* Compte à rebours               */
+/* ------------------------------ */
 #countdown {
   font-size: 2rem;
   font-weight: bold;
-  color: #FFD700 !important; /* jaune */}
+  color: #FF4500 !important; /* rouge vif */
   text-shadow: 1px 1px 3px #000;
   margin-top: 3vh; /* espace suffisant depuis la date */
 }
 
-/* Liens en bas */
+/* ------------------------------ */
+/* Liens en bas                   */
+/* ------------------------------ */
 .links-section {
   position: absolute;
   bottom: 2vh;
   width: 100%;
   text-align: center;
 }
-
 
 .links-section ul {
   list-style: none;
@@ -72,18 +81,28 @@ h1 {
   color: #FF0000;
 }
 
-/* Responsive mobile */
+/* ------------------------------ */
+/* Responsive mobile              */
+/* ------------------------------ */
 @media (max-width: 600px) {
-  h1 { font-size: 2.5rem; top: 2vh; }
-  .date-centree { font-size: 1.2rem; top: 7vh; }
-  #countdown { font-size: 1.8rem; top: 18vh; }
-  .links-section a { font-size: 1.1rem; }
+  h1 { font-size: 2.5rem; }
+  .date-centree { font-size: 1.2rem; }
+  #countdown { font-size: 1.8rem; }
+  
+  .links-section {
+    position: relative; /* pour que tous les liens restent visibles */
+    margin-bottom: 2vh;
+  }
+  .links-section a { font-size: 1rem; }
+  .links-section li { margin-bottom: 0.5rem; }
 }
 
-/* Grands écrans */
+/* ------------------------------ */
+/* Grands écrans                  */
+/* ------------------------------ */
 @media (min-width: 1200px) {
-  h1 { font-size: 4rem; top: 2vh; }
-  .date-centree { font-size: 2rem; top: 8vh; }
-  #countdown { font-size: 3rem; top: 20vh; }
+  h1 { font-size: 4rem; }
+  .date-centree { font-size: 2rem; }
+  #countdown { font-size: 3rem; }
   .links-section a { font-size: 1.5rem; }
 }
