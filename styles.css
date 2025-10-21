@@ -36,7 +36,7 @@ h1 {
 #countdown {
   font-size: 2rem;
   font-weight: bold;
-  color: #FF4500;
+  color: #FFD700 !important; /* jaune */}
   text-shadow: 1px 1px 3px #000;
   margin-top: 3vh; /* espace suffisant depuis la date */
 }
