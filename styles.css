@@ -44,7 +44,7 @@ h1 {
 #countdown {
   font-size: 2rem;
   font-weight: bold;
-  color: #FF4500 !important; /* rouge vif */
+  color: #FF4500 !important; /* orange vif */
   text-shadow: 1px 1px 3px #000;
   margin-top: 3vh; /* espace suffisant depuis la date */
 }
@@ -54,7 +54,7 @@ h1 {
 /* ------------------------------ */
 .links-section {
   position: absolute;
-  bottom: 2vh;
+  bottom: 2vh; /* toujours en bas */
   width: 100%;
   text-align: center;
 }
@@ -89,9 +89,9 @@ h1 {
   .date-centree { font-size: 1.2rem; }
   #countdown { font-size: 1.8rem; }
   
+  /* Maintenir les liens en bas et les rendre visibles */
   .links-section {
-    position: relative; /* pour que tous les liens restent visibles */
-    margin-bottom: 2vh;
+    bottom: 1vh; /* ajuste si nécessaire */
   }
   .links-section a { font-size: 1rem; }
   .links-section li { margin-bottom: 0.5rem; }
