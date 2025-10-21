@@ -1,60 +1,54 @@
+/* Police comics */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Bangers', cursive;
   background-image: url("images/children.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: #222;
+  color: #fff;
   margin: 0;
   padding: 0;
 }
 
+/* Enlever boîte blanche */
 main {
-  max-width: 600px;
-  margin: 40px auto;
-  background: rgba(255, 255, 255, 0.6); /* semi-transparent */
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
   padding: 30px 25px;
 }
 
-/* Boîte principale blanche */
-main {
-  max-width: 600px;
-  margin: 40px auto;
-  background: rgba(255, 255, 255, 0.9); /* légèrement transparent pour laisser voir le fond */
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  padding: 30px 25px;
+/* Titres */
+h1, h2 {
+  color: #FFD700;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000;
 }
 
-/* Style du texte et des liens */
+/* Date */
 .date-centree {
   text-align: center;
   font-size: 1.2em;
   margin-top: 0.5em;
   margin-bottom: 1.5em;
+  color: #FFD700;
+  text-shadow: 1px 1px 3px #000;
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 0;
-  color: #2a7ae2;
-}
-
-.countdown-section {
-  margin-bottom: 30px;
-  text-align: center;
-}
-
+/* Compte à rebours */
 #countdown {
   font-size: 2em;
   margin-top: 15px;
   font-weight: bold;
-  color: #e24a2a;
+  color: #FF4500;
+  text-shadow: 1px 1px 3px #000;
+  text-align: center;
 }
 
+/* Liens */
 .links-section ul {
   list-style: none;
   padding: 0;
@@ -62,15 +56,17 @@ h1 {
 
 .links-section li {
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .links-section a {
   text-decoration: none;
-  color: #2a7ae2;
-  font-size: 1.1em;
+  color: #1E90FF;
+  font-size: 1.3em;
+  text-shadow: 1px 1px 2px #000;
   transition: color 0.2s;
 }
 
 .links-section a:hover {
-  color: #e24a2a;
+  color: #FF0000;
 }
