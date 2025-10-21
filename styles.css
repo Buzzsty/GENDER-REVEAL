@@ -20,12 +20,20 @@ body {
 /* ------------------------------ */
 /* Titre                         */
 /* ------------------------------ */
-h1, h2 {
+h1 {
   color: #FFD700; /* doré */
   text-shadow: 2px 2px 4px #000;
   font-size: 3rem;
   margin: 2vh 0 0 0; /* espace depuis le haut */
 }
+
+h2 {
+  color: #FFD700 !important;
+  text-shadow: 2px 2px 4px #000;
+  font-size: 3rem;
+  margin: 2vh 0 0 0; /* espace depuis le haut */
+}
+
 
 /* ------------------------------ */
 /* Date / Heure                   */
