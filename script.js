@@ -1,5 +1,5 @@
 // Date de l'événement: 22 novembre 2025 à 13h00 (heure de Paris)
-const eventDate = new Date("2025-11-22T15:00:00+01:00");
+const eventDate = new Date("2025-11-22T13:00:00+01:00");
 
 function updateCountdown() {
   const now = new Date();
