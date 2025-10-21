@@ -12,17 +12,19 @@ body {
   height: 100vh;
 }
 
-/* Contenu principal centré */
+/* Contenu principal centré et remonté */
 main {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centre vertical */
-  align-items: center;     /* centre horizontal */
-  text-align: center;
-  height: 100%;
+  justify-content: flex-start; /* commence en haut */
+  align-items: center;         /* centre horizontal */
+  min-height: 100vh;           /* occupe tout l’écran */
+  padding-top: 10vh;           /* remonte le contenu */
+  padding-bottom: 10vh;        /* laisse un espace en bas */
   position: relative;
   background: transparent;
-  padding: 30px 25px;
+  padding-left: 25px;
+  padding-right: 25px;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -30,6 +32,7 @@ main {
 /* Titres */
 h1, h2 {
   color: #FFD700;
+  text-align: center;
   text-shadow: 2px 2px 4px #000;
   margin: 0.5em 0;
 }
@@ -49,12 +52,15 @@ h1, h2 {
   font-weight: bold;
   color: #FF4500;
   text-shadow: 1px 1px 3px #000;
+  text-align: center;
 }
 
-/* Liens centrés en bas (~4/5 de la page) */
+/* Liens centrés vers 4/5 de la page */
 .links-section {
-  margin-top: auto; /* pousse la section vers le bas */
+  margin-top: auto; /* pousse les liens vers le bas */
   width: 100%;
+  text-align: center;
+  padding-bottom: 5vh; /* espace par rapport au bas */
 }
 
 .links-section ul {
@@ -81,7 +87,8 @@ h1, h2 {
 /* Responsive pour mobile */
 @media (max-width: 600px) {
   main {
-    padding: 15px;
+    padding-top: 8vh;
+    padding-bottom: 8vh;
   }
   #countdown {
     font-size: 1.8rem;
@@ -95,7 +102,8 @@ h1, h2 {
 @media (min-width: 1200px) {
   main {
     max-width: 800px;
-    padding: 40px;
+    padding-top: 12vh;
+    padding-bottom: 12vh;
   }
   #countdown {
     font-size: 3rem;
