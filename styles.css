@@ -9,22 +9,22 @@ body {
   color: #fff;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 100%;
+  overflow: hidden; /* empêche tout scroll */
+  box-sizing: border-box;
 }
 
-/* Contenu principal centré avec espacement */
+/* Contenu principal en colonne */
 main {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centre vertical */
-  align-items: center;     /* centre horizontal */
-  min-height: 100vh;       /* occupe tout l’écran */
-  padding: 20px;
-  gap: 2rem;               /* espace entre les sections */
-  position: relative;
-  background: transparent;
+  justify-content: flex-start; /* commence en haut */
+  align-items: center;         /* centre horizontal */
+  height: 100%;                /* utilise toute la hauteur */
   max-width: 600px;
   margin: 0 auto;
+  padding: 2vh 20px 2vh 20px;  /* espace depuis le haut et bas */
+  gap: 2vh;                     /* espacement vertical entre sections */
 }
 
 /* Titres */
@@ -32,7 +32,7 @@ h1, h2 {
   color: #FFD700;
   text-align: center;
   text-shadow: 2px 2px 4px #000;
-  margin: 0.5em 0;
+  margin: 0;
 }
 
 /* Date */
@@ -51,9 +51,12 @@ h1, h2 {
   text-align: center;
 }
 
-/* Liens centrés */
+/* Liens centrés vers 4/5 de la page */
 .links-section {
+  margin-top: auto; /* pousse vers le bas */
+  width: 100%;
   text-align: center;
+  padding-bottom: 2vh; /* espace par rapport au bas */
 }
 
 .links-section ul {
@@ -62,7 +65,7 @@ h1, h2 {
 }
 
 .links-section li {
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 
 .links-section a {
@@ -77,11 +80,11 @@ h1, h2 {
   color: #FF0000;
 }
 
-/* Responsive pour mobile */
+/* Responsive mobile */
 @media (max-width: 600px) {
   main {
-    padding: 15px;
-    gap: 1.5rem;
+    padding: 2vh 15px;
+    gap: 1.5vh;
   }
   #countdown {
     font-size: 1.8rem;
@@ -91,12 +94,12 @@ h1, h2 {
   }
 }
 
-/* Pour grands écrans */
+/* Grand écran */
 @media (min-width: 1200px) {
   main {
     max-width: 800px;
-    padding: 40px;
-    gap: 2.5rem;
+    padding: 2vh 40px;
+    gap: 3vh;
   }
   #countdown {
     font-size: 3rem;
