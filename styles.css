@@ -16,16 +16,12 @@ body {
   text-align: center;
 }
 
-/* Titre GENDER REVEAL */
+/* Titre */
 h1 {
   color: #FFD700;
   text-shadow: 2px 2px 4px #000;
   font-size: 3rem;
-  margin: 0;
-  position: absolute;
-  top: 2vh; /* tout en haut */
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 2vh 0 0 0; /* espace depuis le haut */
 }
 
 /* Date / Heure */
@@ -33,10 +29,7 @@ h1 {
   font-size: 1.5rem;
   color: #FFD700;
   text-shadow: 1px 1px 3px #000;
-  position: absolute;
-  top: 8vh; /* juste en dessous du titre */
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 1vh; /* juste en dessous du titre */
 }
 
 /* Compte à rebours */
@@ -45,19 +38,17 @@ h1 {
   font-weight: bold;
   color: #FF4500;
   text-shadow: 1px 1px 3px #000;
-  position: absolute;
-  top: 20vh; /* un peu plus bas dans la partie haute */
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 3vh; /* espace suffisant depuis la date */
 }
 
 /* Liens en bas */
 .links-section {
   position: absolute;
-  bottom: 2vh; /* collés en bas avec petit espace */
+  bottom: 2vh;
   width: 100%;
   text-align: center;
 }
+
 
 .links-section ul {
   list-style: none;
