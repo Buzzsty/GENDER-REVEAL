@@ -1,6 +1,4 @@
 /* Police comics */
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
-
 body {
   font-family: 'Bangers', cursive;
   background-image: url("images/children.png");
@@ -13,34 +11,36 @@ body {
   padding: 0;
 }
 
-/* Enlever boîte blanche */
+/* Contenu principal */
 main {
   background: transparent;
   box-shadow: none;
   border-radius: 0;
   padding: 30px 25px;
+  max-width: 600px;
+  margin: 40px auto;
 }
 
 /* Titres */
 h1, h2 {
-  color: #FFD700;
+  color: #FFD700; /* jaune comics */
   text-align: center;
   text-shadow: 2px 2px 4px #000;
+  margin: 0.5em 0;
 }
 
 /* Date */
 .date-centree {
   text-align: center;
   font-size: 1.2em;
-  margin-top: 0.5em;
-  margin-bottom: 1.5em;
   color: #FFD700;
   text-shadow: 1px 1px 3px #000;
+  margin-bottom: 1.5em;
 }
 
 /* Compte à rebours */
 #countdown {
-  font-size: 2em;
+  font-size: 2rem;
   margin-top: 15px;
   font-weight: bold;
   color: #FF4500;
@@ -61,7 +61,7 @@ h1, h2 {
 
 .links-section a {
   text-decoration: none;
-  color: #1E90FF;
+  color: #1E90FF; /* bleu comics */
   font-size: 1.3em;
   text-shadow: 1px 1px 2px #000;
   transition: color 0.2s;
@@ -69,4 +69,28 @@ h1, h2 {
 
 .links-section a:hover {
   color: #FF0000;
+}
+
+/* Responsive pour mobile et PC */
+@media (max-width: 600px) {
+  main {
+    padding: 15px;
+    margin: 10px;
+  }
+  #countdown {
+    font-size: 1.8rem;
+  }
+  .links-section a {
+    font-size: 1.1em;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    max-width: 800px;
+    padding: 40px;
+  }
+  #countdown {
+    font-size: 3rem;
+  }
 }
