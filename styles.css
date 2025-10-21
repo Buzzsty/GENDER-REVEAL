@@ -38,20 +38,12 @@ h1 {
 }
 
 /* ------------------------------ */
-/* Texte fixe "Compte à rebours"  */
-/* ------------------------------ */
-#countdown-label {
-  color: #FFD700; /* même jaune que le titre et la date */
-  text-shadow: 1px 1px 3px #000;
-}
-
-/* ------------------------------ */
-/* Compte à rebours dynamique     */
+/* Compte à rebours               */
 /* ------------------------------ */
 #countdown {
   font-size: 2rem;
   font-weight: bold;
-  color: #FF4500 !important; /* orange vif / rouge dynamique selon JS */
+  color: #FF4500 !important; /* orange vif */
   text-shadow: 1px 1px 3px #000;
   margin-top: 3vh;
 }
